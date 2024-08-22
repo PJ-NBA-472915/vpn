@@ -16,7 +16,7 @@ services:
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
       - "/etc/timezone:/etc/timezone:ro"
-      - "./softether_data:/mnt"
-      - "./softether_log:/root/server_log"
-      - "./softether_packetlog:/root/packet_log"
-      - "./softether_securitylog:/root/security_log"
+      - "./.docker/data:/mnt"
+      - "./.docker/log:/root/server_log"
+      - "./.docker/packetlog:/root/packet_log"
+      - "./.docker/securitylog:/root/security_log"
