@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alias vpn-exec="docker compose exec -it vpn "

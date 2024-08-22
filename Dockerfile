@@ -1,0 +1,1 @@
+FROM softethervpn/vpnserver:stable
