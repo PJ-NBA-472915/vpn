@@ -1,3 +1,15 @@
 #!/bin/bash
 
+cat <<EOF
+
+Loaded aliases for this repo:
+===============================================================
+
+vpn-exec      :  docker compose exec -it vpn 
+up            :  docker-compose up --build --force-recreate       
+
+===============================================================
+EOF
+
 alias vpn-exec="docker compose exec -it vpn "
+alias up="docker-compose up --build --force-recreate"

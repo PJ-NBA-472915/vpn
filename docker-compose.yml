@@ -13,6 +13,8 @@ services:
       - 500:500/udp
       - 4500:4500/udp
       - 1701:1701/udp
+    env_file:
+      - .env
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
       - "/etc/timezone:/etc/timezone:ro"
