@@ -6,10 +6,12 @@ Loaded aliases for this repo:
 ===============================================================
 
 vpn-exec      :  docker compose exec -it vpn 
-up            :  docker-compose up --build --force-recreate       
+up            :  docker-compose up --build --force-recreate
+sync-ip       :  sh scripts/update_ip_for_port.sh    
 
 ===============================================================
 EOF
 
 alias vpn-exec="docker compose exec -it vpn "
 alias up="docker-compose up --build --force-recreate"
+alias sync-ip="sh scripts/update_ip_for_port.sh"

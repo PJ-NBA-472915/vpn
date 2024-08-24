@@ -11,7 +11,8 @@ configure_server() {
     echo "Initiating the VPN server configuration..."
 
     # Configure the VPN server
-    vpncmd localhost /SERVER /CMD HubCreate "${HUB_NAME}" /PASSWORD:"${HUB_PASSWORD}" \
+    # vpncmd localhost /SERVER /CMD HubCreate "${HUB_NAME}" /PASSWORD:"${HUB_PASSWORD}" \
+    vpncmd localhost /SERVER /CMD HubCreate "${HUB_NAME}" \
         && echo "Hub (${HUB_NAME}) created successfully."
 
     vpncmd localhost /SERVER /CMD HubList
@@ -24,7 +25,8 @@ configure_server() {
     vpncmd localhost /SERVER /CMD UserCreate "${USERNAME}" /GROUP:none /REALNAME:none /NOTE:none \
         && echo "User (${USERNAME}) created successfully."
 
-    vpncmd localhost /SERVER /CMD UserPasswordSet "${USERNAME}" /PASSWORD:"${USER_PASSWORD}" \
+    # vpncmd localhost /SERVER /CMD UserPasswordSet "${USERNAME}" /PASSWORD:"${USER_PASSWORD}" \
+    vpncmd localhost /SERVER /CMD UserPasswordSet "${USERNAME}" \
         && echo "User password set successfully."
 
     vpncmd localhost /SERVER /CMD ServerPasswordSet "${SERVER_PASSWORD}" \
